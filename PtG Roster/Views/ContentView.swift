@@ -45,7 +45,7 @@ struct ContentView: View {
                     }
                 }
             }
-        }
+        }.navigationBarHidden(true).preferredColorScheme(.dark)
         
         .onChange(of: scenePhase) { phase in
             if phase == .inactive { saveAction() }

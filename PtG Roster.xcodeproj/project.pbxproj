@@ -29,6 +29,7 @@
 		85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyRow.swift; sourceTree = "<group>"; };
 		85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyData.swift; sourceTree = "<group>"; };
 		85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
+		85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PtG-Roster-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +62,7 @@
 		85E5CE9527DD00EC000EDDDB /* PtG Roster */ = {
 			isa = PBXGroup;
 			children = (
+				85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */,
 				85E5CE9627DD00EC000EDDDB /* PtG_RosterApp.swift */,
 				85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */,
 				85E5CE9C27DD00EC000EDDDB /* Preview Content */,
@@ -308,12 +310,12 @@
 				DEVELOPMENT_TEAM = 7SGM899LTH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "PtG-Roster-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,12 +340,12 @@
 				DEVELOPMENT_TEAM = 7SGM899LTH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_FILE = "PtG-Roster-Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

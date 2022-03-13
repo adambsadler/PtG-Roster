@@ -9,12 +9,10 @@ import SwiftUI
 
 struct ArmyListView: View {
     var body: some View {
-        NavigationView {
             List {
                 ArmyRow(army: Army(id: 1, name: "Acoyltes of Azyr", faction: "Stormcast Eternals", subfaction: "Hallowed Knights", realm: Army.Realm.azyr, startingSize: Army.Size.warband, startingTerriroty: Army.Territory.sacredSite))
             }
             .navigationTitle("My Armies")
-        }
     }
 }
 
