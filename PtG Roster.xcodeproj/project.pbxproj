@@ -11,6 +11,10 @@
 		85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CE9827DD00EC000EDDDB /* ContentView.swift */; };
 		85E5CE9B27DD00EC000EDDDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */; };
 		85E5CE9E27DD00EC000EDDDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */; };
+		85E5CEA727DD2BD7000EDDDB /* ArmyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */; };
+		85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA827DD5B59000EDDDB /* Army.swift */; };
+		85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */; };
+		85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		85E5CE9827DD00EC000EDDDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListView.swift; sourceTree = "<group>"; };
+		85E5CEA827DD5B59000EDDDB /* Army.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
+		85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyRow.swift; sourceTree = "<group>"; };
+		85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,9 +60,10 @@
 			isa = PBXGroup;
 			children = (
 				85E5CE9627DD00EC000EDDDB /* PtG_RosterApp.swift */,
-				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
 				85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */,
 				85E5CE9C27DD00EC000EDDDB /* Preview Content */,
+				85E5CEAB27DD5D2A000EDDDB /* Models */,
+				85E5CEAA27DD5D16000EDDDB /* Views */,
 			);
 			path = "PtG Roster";
 			sourceTree = "<group>";
@@ -65,6 +74,25 @@
 				85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		85E5CEAA27DD5D16000EDDDB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */,
+				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
+				85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		85E5CEAB27DD5D2A000EDDDB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				85E5CEA827DD5B59000EDDDB /* Army.swift */,
+				85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85E5CEA727DD2BD7000EDDDB /* ArmyListView.swift in Sources */,
+				85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */,
+				85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */,
 				85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */,
+				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +307,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,6 +337,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
