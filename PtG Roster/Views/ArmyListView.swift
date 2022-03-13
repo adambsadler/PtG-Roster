@@ -31,7 +31,7 @@ struct ArmyListView: View {
             }
             .sheet(isPresented: $isPresentingNewArmyView) {
                 NavigationView {
-                    DetailEditView(data: $newArmyData)
+                    CreateArmyView(data: $newArmyData)
                         .toolbar {
                             ToolbarItem(placement: .cancellationAction) {
                                 Button("Cancel") {

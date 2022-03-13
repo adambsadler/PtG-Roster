@@ -19,6 +19,19 @@ class ArmyData: ObservableObject {
             .appendingPathComponent("armies.data")
     }
     
+    static func load() async throws -> [Army] {
+        try await withCheckedThrowingContinuation { continuation in
+            load { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let armies):
+                    continuation.resume(returning: armies)
+                }
+            }
+        }
+    }
+    
     static func load(completion: @escaping (Result<[Army], Error>)->Void) {
         DispatchQueue.global(qos: .background).async {
             do {
@@ -36,6 +49,20 @@ class ArmyData: ObservableObject {
             } catch {
                 DispatchQueue.main.async {
                     completion(.failure(error))
+                }
+            }
+        }
+    }
+    
+    @discardableResult
+    static func save(armies: [Army]) async throws -> Int {
+        try await withCheckedThrowingContinuation { continuation in
+            save(armies: armies) { result in
+                switch result {
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                case .success(let armiesSaved):
+                    continuation.resume(returning: armiesSaved)
                 }
             }
         }

@@ -15,21 +15,20 @@ struct PtG_RosterApp: App {
         WindowGroup {
             NavigationView {
                 ContentView(armies: $armyData.armies) {
-                    ArmyData.save(armies: armyData.armies) { result in
-                        if case .failure(let error) = result {
-                            fatalError(error.localizedDescription)
+                    Task {
+                        do {
+                            try await ArmyData.save(armies: armyData.armies)
+                        } catch {
+                            fatalError("Error saving armies.")
                         }
                     }
                 }
             }
-            .onAppear {
-                ArmyData.load { result in
-                    switch result {
-                    case .failure(let error):
-                        fatalError(error.localizedDescription)
-                    case .success(let armies):
-                        armyData.armies = armies
-                    }
+            .task {
+                do {
+                    armyData.armies = try await ArmyData.load()
+                } catch {
+                    fatalError("Error loading armies.")
                 }
             }
         
