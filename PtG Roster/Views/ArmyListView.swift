@@ -8,16 +8,53 @@
 import SwiftUI
 
 struct ArmyListView: View {
+    @Binding var armies: [Army]
+    @State private var isPresentingNewArmyView = false
+    @State private var newArmyData = Army.Data()
+    
     var body: some View {
             List {
-                ArmyRow(army: Army(id: 1, name: "Acoyltes of Azyr", faction: "Stormcast Eternals", subfaction: "Hallowed Knights", realm: Army.Realm.azyr, startingSize: Army.Size.warband, startingTerriroty: Army.Territory.sacredSite))
+                ForEach($armies) { $army in
+                    NavigationLink(destination: ArmyDetailView(army: $army)) {
+                        ArmyRow(army: army)
+                    }
+                }
             }
             .navigationTitle("My Armies")
+            .toolbar {
+                Button(action: {
+                    isPresentingNewArmyView = true
+                }) {
+                    Image(systemName: "plus")
+                }
+                .accessibilityLabel("New Army")
+            }
+            .sheet(isPresented: $isPresentingNewArmyView) {
+                NavigationView {
+                    DetailEditView(data: $newArmyData)
+                        .toolbar {
+                            ToolbarItem(placement: .cancellationAction) {
+                                Button("Cancel") {
+                                    isPresentingNewArmyView = false
+                                    newArmyData = Army.Data()
+                                }
+                            }
+                            ToolbarItem(placement: .confirmationAction) {
+                                Button("Create") {
+                                    let newArmy = Army(data: newArmyData)
+                                    armies.append(newArmy)
+                                    isPresentingNewArmyView = false
+                                    newArmyData = Army.Data()
+                                }
+                            }
+                        }
+                }
+            }
     }
 }
 
 struct ArmyListView_Previews: PreviewProvider {
     static var previews: some View {
-        ArmyListView()
+        ArmyListView(armies: .constant(Army.sampleData))
     }
 }

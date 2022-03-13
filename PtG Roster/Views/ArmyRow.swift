@@ -26,6 +26,6 @@ struct ArmyRow: View {
 
 struct ArmyRow_Previews: PreviewProvider {
     static var previews: some View {
-        ArmyRow(army: Army(id: 1, name: "Acoyltes of Azyr", faction: "Stormcast Eternals", subfaction: "Hallowed Knights", realm: Army.Realm.azyr, startingSize: Army.Size.warband, startingTerriroty: Army.Territory.sacredSite)).previewLayout(.fixed(width: 300, height: 70))
+        ArmyRow(army: Army.sampleData[0])
     }
 }

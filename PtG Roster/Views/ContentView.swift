@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Binding var armies: [Army]
     @Environment(\.scenePhase) private var scenePhase
     let saveAction: ()->Void
     
@@ -24,7 +25,7 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350.0)
                     Divider()
-                    NavigationLink(destination: ArmyListView()) {
+                    NavigationLink(destination: ArmyListView(armies: $armies)) {
                         Text("My Armies")
                             .padding()
                             .foregroundColor(.black)
@@ -45,8 +46,9 @@ struct ContentView: View {
                     }
                 }
             }
-        }.navigationBarHidden(true).preferredColorScheme(.dark)
-        
+        }.navigationViewStyle(StackNavigationViewStyle())
+        .navigationBarHidden(true)
+        .preferredColorScheme(.dark)
         .onChange(of: scenePhase) { phase in
             if phase == .inactive { saveAction() }
         }
@@ -55,7 +57,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(saveAction: {})
-.previewInterfaceOrientation(.portrait)
+        ContentView(armies: .constant(Army.sampleData), saveAction: {})
     }
 }

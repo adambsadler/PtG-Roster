@@ -16,6 +16,8 @@
 		85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */; };
 		85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */; };
 		85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */; };
+		85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */; };
+		85E5CEB627DE6861000EDDDB /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB527DE6861000EDDDB /* DetailEditView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyData.swift; sourceTree = "<group>"; };
 		85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
 		85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PtG-Roster-Info.plist"; sourceTree = SOURCE_ROOT; };
+		85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyDetailView.swift; sourceTree = "<group>"; };
+		85E5CEB527DE6861000EDDDB /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
 				85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */,
 				85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */,
+				85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */,
+				85E5CEB527DE6861000EDDDB /* DetailEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,10 +178,12 @@
 			files = (
 				85E5CEA727DD2BD7000EDDDB /* ArmyListView.swift in Sources */,
 				85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */,
+				85E5CEB627DE6861000EDDDB /* DetailEditView.swift in Sources */,
 				85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */,
 				85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */,
 				85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */,
 				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
+				85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
