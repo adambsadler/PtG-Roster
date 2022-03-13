@@ -18,6 +18,8 @@
 		85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */; };
 		85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */; };
 		85E5CEB627DE6861000EDDDB /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB527DE6861000EDDDB /* DetailEditView.swift */; };
+		85E5CEB827DEA6E0000EDDDB /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */; };
+		85E5CEBA27DEA779000EDDDB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB927DEA779000EDDDB /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PtG-Roster-Info.plist"; sourceTree = SOURCE_ROOT; };
 		85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyDetailView.swift; sourceTree = "<group>"; };
 		85E5CEB527DE6861000EDDDB /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
+		85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		85E5CEB927DEA779000EDDDB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 				85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */,
 				85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */,
 				85E5CEB527DE6861000EDDDB /* DetailEditView.swift */,
+				85E5CEB927DEA779000EDDDB /* ErrorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -102,6 +107,7 @@
 			children = (
 				85E5CEA827DD5B59000EDDDB /* Army.swift */,
 				85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */,
+				85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -184,7 +190,9 @@
 				85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */,
 				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
 				85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */,
+				85E5CEB827DEA6E0000EDDDB /* ErrorWrapper.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,
+				85E5CEBA27DEA779000EDDDB /* ErrorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

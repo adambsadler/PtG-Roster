@@ -10,6 +10,7 @@ import SwiftUI
 @main
 struct PtG_RosterApp: App {
     @StateObject private var armyData = ArmyData()
+    @State private var errorWrapper: ErrorWrapper?
     
     var body: some Scene {
         WindowGroup {
@@ -19,7 +20,7 @@ struct PtG_RosterApp: App {
                         do {
                             try await ArmyData.save(armies: armyData.armies)
                         } catch {
-                            fatalError("Error saving armies.")
+                            errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
                         }
                     }
                 }
@@ -28,10 +29,14 @@ struct PtG_RosterApp: App {
                 do {
                     armyData.armies = try await ArmyData.load()
                 } catch {
-                    fatalError("Error loading armies.")
+                    errorWrapper = ErrorWrapper(error: error, guidance: "The application will load sample data and continue.")
                 }
             }
-        
+            .sheet(item: $errorWrapper, onDismiss: {
+                armyData.armies = Army.sampleData
+            }) {wrapper in
+                ErrorView(errorWrapper: wrapper)
+            }
         }
     }
 }
