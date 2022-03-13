@@ -15,6 +15,7 @@
 		85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA827DD5B59000EDDDB /* Army.swift */; };
 		85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */; };
 		85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */; };
+		85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		85E5CEA827DD5B59000EDDDB /* Army.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
 		85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyRow.swift; sourceTree = "<group>"; };
 		85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyData.swift; sourceTree = "<group>"; };
+		85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 				85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */,
 				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
 				85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */,
+				85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */,
 				85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */,
 				85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */,
+				85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */,
 				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,
 			);

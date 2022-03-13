@@ -12,22 +12,41 @@ struct ContentView: View {
     let saveAction: ()->Void
     
     var body: some View {
-        ZStack {
-            Image("PtG Background")
-                .resizable()
-                .edgesIgnoringSafeArea(.all)
-                .aspectRatio(contentMode: .fill)
-            VStack {
-                Image("PtG Logo")
+        NavigationView {
+            ZStack {
+                Image("PtG Background")
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 350.0)
-                Divider()
-                NavButton(buttonText: "My Armies")
-                Divider()
-                NavButton(buttonText: "New Army")
+                    .edgesIgnoringSafeArea(.all)
+                    .aspectRatio(contentMode: .fill)
+                VStack {
+                    Image("PtG Logo")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 350.0)
+                    Divider()
+                    NavigationLink(destination: ArmyListView()) {
+                        Text("My Armies")
+                            .padding()
+                            .foregroundColor(.black)
+                            .font(.system(size: 25))
+                            .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
+                            .cornerRadius(25)
+                            .shadow(radius: 10)
+                    }
+                    Divider()
+                    NavigationLink(destination: CreateArmyView()) {
+                        Text("New Army")
+                            .padding()
+                            .foregroundColor(.black)
+                            .font(.system(size: 25))
+                            .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
+                            .cornerRadius(25)
+                            .shadow(radius: 10)
+                    }
+                }
             }
         }
+        
         .onChange(of: scenePhase) { phase in
             if phase == .inactive { saveAction() }
         }
@@ -38,24 +57,5 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(saveAction: {})
 .previewInterfaceOrientation(.portrait)
-    }
-}
-
-struct NavButton: View {
-    
-    let buttonText: String
-    
-    var body: some View {
-        Button(action: {
-            
-        }) {
-            Text(buttonText)
-                .font(.system(size: 25))
-                .foregroundColor(.black)
-                .padding(.all)
-        }
-        .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
-        .cornerRadius(25)
-        .shadow(radius: 10)
     }
 }
