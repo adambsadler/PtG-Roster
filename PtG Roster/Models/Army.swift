@@ -17,7 +17,7 @@ struct Army: Codable, Identifiable {
     var startingSize: Size
     var startingTerritory: Territory
     var gloryPoints: Int = 0
-    var vault: [Vault] = []
+    var vault: [Enhancement] = []
     
     init(id: UUID = UUID(), name: String, faction: String, subfaction: String, realm: Realm, startingSize: Size, startingTerritory: Territory) {
         self.id = id
@@ -59,12 +59,23 @@ struct Army: Codable, Identifiable {
 }
 
 extension Army {
-    struct Vault: Identifiable, Codable {
+    struct Enhancement: Identifiable, Codable {
         let id: UUID
-        var type: String
+        var type: EnhancementType
         var name: String
         
-        init(id: UUID = UUID(), type: String, name: String) {
+        enum EnhancementType: String, Codable, CaseIterable {
+            case artefactOfPower = "Artefact of Power"
+            case uniqueEnhancement = "Unique Enhancement"
+            case bonusSpell = "Bonus Spell"
+            case bonusPrayer = "Bonus Prayer"
+            case endlessSpell = "Endless Spell"
+            case invocation = "Invocation"
+            case triumph = "Triumph"
+            case battalion = "Battalion"
+        }
+        
+        init(id: UUID = UUID(), type: EnhancementType, name: String) {
             self.id = id
             self.type = type
             self.name = name
@@ -79,7 +90,7 @@ extension Army {
         var startingSize: Size = Size.vanguard
         var startingTerritory: Territory = Territory.oldKeep
         var gloryPoints: Int = 0
-        var vault: [Vault] = []
+        var vault: [Enhancement] = []
     }
     
     var data: Data {

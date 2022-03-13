@@ -146,9 +146,11 @@ struct ArmyDetailView: View {
             }
             Section(header: Text("Vault")) {
                 ForEach(army.vault) { upgrade in
-                    Text(upgrade.type)
-                    Spacer()
-                    Text(upgrade.name)
+                    HStack {
+                        Text("\(upgrade.type.rawValue):").font(.headline)
+                        Spacer()
+                        Text(upgrade.name)
+                    }
                 }
             }
         }

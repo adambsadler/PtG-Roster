@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @Binding var armies: [Army]
     @Environment(\.scenePhase) private var scenePhase
+    @State private var isPresentingNewArmyView = false
+    @State private var newArmyData = Army.Data()
     let saveAction: ()->Void
     
     var body: some View {
@@ -35,14 +37,38 @@ struct ContentView: View {
                             .shadow(radius: 10)
                     }
                     Divider()
-                    NavigationLink(destination: CreateArmyView()) {
+                    Button(action: {
+                        isPresentingNewArmyView = true
+                    }) {
                         Text("New Army")
-                            .padding()
-                            .foregroundColor(.black)
-                            .font(.system(size: 25))
-                            .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
-                            .cornerRadius(25)
-                            .shadow(radius: 10)
+                    }
+                        .accessibilityLabel("New Army")
+                        .padding()
+                        .foregroundColor(.black)
+                        .font(.system(size: 25))
+                        .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
+                        .cornerRadius(25)
+                        .shadow(radius: 10)
+                }
+                .sheet(isPresented: $isPresentingNewArmyView) {
+                    NavigationView {
+                        CreateArmyView(data: $newArmyData)
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Cancel") {
+                                        isPresentingNewArmyView = false
+                                        newArmyData = Army.Data()
+                                    }
+                                }
+                                ToolbarItem(placement: .confirmationAction) {
+                                    Button("Create") {
+                                        let newArmy = Army(data: newArmyData)
+                                        armies.append(newArmy)
+                                        isPresentingNewArmyView = false
+                                        newArmyData = Army.Data()
+                                    }
+                                }
+                            }
                     }
                 }
             }

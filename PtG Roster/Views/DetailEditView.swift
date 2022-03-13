@@ -10,7 +10,7 @@ import SwiftUI
 struct DetailEditView: View {
     @Binding var data: Army.Data
     @State private var newUpgradeName = ""
-    @State private var newUpgradeType = ""
+    @State private var newUpgradeType = Army.Enhancement.EnhancementType.artefactOfPower
     
     var body: some View {
         Form {
@@ -50,7 +50,7 @@ struct DetailEditView: View {
                     TextField("New Enhancement", text: $newUpgradeName)
                     Button(action: {
                         withAnimation {
-                            let upgrade = Army.Vault(type: newUpgradeType, name: newUpgradeName)
+                            let upgrade = Army.Enhancement(type: newUpgradeType, name: newUpgradeName)
                             data.vault.append(upgrade)
                             newUpgradeName = ""
                         }
@@ -58,6 +58,11 @@ struct DetailEditView: View {
                         Image(systemName: "plus.circle.fill")
                     }
                     .disabled(newUpgradeName.isEmpty)
+                }
+                Picker("Enhancement Type", selection: $newUpgradeType) {
+                    ForEach(Army.Enhancement.EnhancementType.allCases, id: \.self) { eType in
+                        Text(eType.rawValue).tag(eType)
+                    }
                 }
             }
         }
