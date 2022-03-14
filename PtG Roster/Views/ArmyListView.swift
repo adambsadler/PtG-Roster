@@ -19,6 +19,9 @@ struct ArmyListView: View {
                         ArmyRow(army: army)
                     }
                 }
+                .onDelete { indices in
+                    armies.remove(atOffsets: indices)
+                }
             }
             .navigationTitle("My Armies")
             .toolbar {
