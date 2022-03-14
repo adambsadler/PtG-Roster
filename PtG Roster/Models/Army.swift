@@ -18,6 +18,17 @@ struct Army: Codable, Identifiable {
     var startingTerritory: Territory
     var gloryPoints: Int = 0
     var vault: [Enhancement] = []
+    var currentQuest: String = ""
+    var questReward: String = ""
+    var questProgress: Int = 0
+    var strongholdName: String = ""
+    var strongholdType: StrongholdType = StrongholdType.standard
+    var barracks: Int = 0
+    var battlesFought: Int = 0
+    var victoriesWon: Int = 0
+    var questsCompleted: Int = 0
+    var heroesSlain: Int = 0
+    var currentTerritory: [String] = []
     
     init(id: UUID = UUID(), name: String, faction: String, subfaction: String, realm: Realm, startingSize: Size, startingTerritory: Territory) {
         self.id = id
@@ -56,6 +67,12 @@ struct Army: Codable, Identifiable {
         case smallSettlement = "Small Settlement"
         case ancientRoads = "Ancient Roads"
     }
+    
+    enum StrongholdType: String, Codable, CaseIterable {
+        case standard = "Stronghold"
+        case imposing = "Imposing Stronghold"
+        case mighty = "Mighty Stronghold"
+    }
 }
 
 extension Army {
@@ -91,10 +108,21 @@ extension Army {
         var startingTerritory: Territory = Territory.oldKeep
         var gloryPoints: Int = 0
         var vault: [Enhancement] = []
+        var currentQuest: String = ""
+        var questReward: String = ""
+        var questProgress: Int = 0
+        var strongholdName: String = ""
+        var strongholdType: StrongholdType = StrongholdType.standard
+        var barracks: Int = 0
+        var battlesFought: Int = 0
+        var victoriesWon: Int = 0
+        var questsCompleted: Int = 0
+        var heroesSlain: Int = 0
+        var currentTerritory: [String] = []
     }
     
     var data: Data {
-        Data(name: name, faction: faction, subfaction: subfaction, realm: realm, startingSize: startingSize, startingTerritory: startingTerritory, gloryPoints: gloryPoints, vault: vault)
+        Data(name: name, faction: faction, subfaction: subfaction, realm: realm, startingSize: startingSize, startingTerritory: startingTerritory, gloryPoints: gloryPoints, vault: vault, currentQuest: currentQuest, questReward: questReward, questProgress: questProgress, strongholdName: strongholdName, strongholdType: strongholdType, barracks: barracks, battlesFought: battlesFought, victoriesWon: victoriesWon, questsCompleted: questsCompleted, heroesSlain: heroesSlain, currentTerritory: currentTerritory)
     }
     
     mutating func update(from data: Data) {
@@ -106,6 +134,17 @@ extension Army {
         startingTerritory = data.startingTerritory
         gloryPoints = data.gloryPoints
         vault = data.vault
+        currentQuest = data.currentQuest
+        questReward = data.questReward
+        questProgress = data.questProgress
+        strongholdName = data.strongholdName
+        strongholdType = data.strongholdType
+        barracks = data.barracks
+        battlesFought = data.battlesFought
+        victoriesWon = data.victoriesWon
+        questsCompleted = data.questsCompleted
+        heroesSlain = data.heroesSlain
+        currentTerritory = data.currentTerritory
     }
     
     init(data: Data) {
@@ -118,6 +157,17 @@ extension Army {
         startingTerritory = data.startingTerritory
         gloryPoints = data.gloryPoints
         vault = data.vault
+        currentQuest = data.currentQuest
+        questReward = data.questReward
+        questProgress = data.questProgress
+        strongholdName = data.strongholdName
+        strongholdType = data.strongholdType
+        barracks = data.barracks
+        battlesFought = data.battlesFought
+        victoriesWon = data.victoriesWon
+        questsCompleted = data.questsCompleted
+        heroesSlain = data.heroesSlain
+        currentTerritory = data.currentTerritory
     }
 }
 

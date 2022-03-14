@@ -14,8 +14,11 @@ struct CreateArmyView: View {
         Form {
             Section(header: Text("Army Details")) {
                 TextField("Name", text: $data.name)
+                    .disableAutocorrection(true)
                 TextField("Faction", text: $data.faction)
+                    .disableAutocorrection(true)
                 TextField("Subfaction", text: $data.subfaction)
+                    .disableAutocorrection(true)
                 Picker("Choose Realm", selection: $data.realm) {
                     ForEach(Army.Realm.allCases, id: \.self) { realm in
                         Text(realm.rawValue)

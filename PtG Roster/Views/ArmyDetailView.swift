@@ -64,21 +64,21 @@ struct ArmyDetailView: View {
                     Text("Current Quest:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(army.currentQuest)
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Quest Reward:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(army.questReward)
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Quest Progress:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.questProgress))
                 }
                 .accessibilityElement(children: .combine)
             }
@@ -87,21 +87,21 @@ struct ArmyDetailView: View {
                     Text("Name:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(army.strongholdName)
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Barracks:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.barracks))
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Type:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(army.strongholdType.rawValue)
                 }
                 .accessibilityElement(children: .combine)
             }
@@ -110,39 +110,46 @@ struct ArmyDetailView: View {
                     Text("Battles Fought:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.battlesFought))
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Victories Won:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.victoriesWon))
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Quests Completed:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.questsCompleted))
                 }
                 .accessibilityElement(children: .combine)
                 HStack {
                     Text("Enemy Heroes Slain:")
                         .font(.headline)
                     Spacer()
-                    Text("")
+                    Text(String(army.heroesSlain))
                 }
                 .accessibilityElement(children: .combine)
             }
             Section(header: Text("Territories")) {
                 HStack {
-                    Text("Type:")
+                    Text("Starting Territory:")
                         .font(.headline)
                     Spacer()
                     Text(army.startingTerritory.rawValue)
                 }
                 .accessibilityElement(children: .combine)
+                ForEach(army.currentTerritory, id: \.self) { territory in
+                    HStack {
+                        Text("Type:").font(.headline)
+                        Spacer()
+                        Text(territory)
+                    }
+                }
             }
             Section(header: Text("Vault")) {
                 ForEach(army.vault) { upgrade in
