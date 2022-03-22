@@ -14,14 +14,12 @@ struct PtG_RosterApp: App {
     
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                ContentView(armies: $armyData.armies) {
-                    Task {
-                        do {
-                            try await ArmyData.save(armies: armyData.armies)
-                        } catch {
-                            errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
-                        }
+            ContentView(armies: $armyData.armies) {
+                Task {
+                    do {
+                        try await ArmyData.save(armies: armyData.armies)
+                    } catch {
+                        errorWrapper = ErrorWrapper(error: error, guidance: "Try again later.")
                     }
                 }
             }

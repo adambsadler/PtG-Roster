@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @Binding var armies: [Army]
     @Environment(\.scenePhase) private var scenePhase
-    @State private var isPresentingNewArmyView = false
+    @State private var isPresentingCreateArmyView = false
     @State private var newArmyData = Army.Data()
     let saveAction: ()->Void
     
@@ -38,7 +38,7 @@ struct ContentView: View {
                     }
                     Divider()
                     Button(action: {
-                        isPresentingNewArmyView = true
+                        isPresentingCreateArmyView = true
                     }) {
                         Text("New Army")
                     }
@@ -50,13 +50,13 @@ struct ContentView: View {
                         .cornerRadius(25)
                         .shadow(radius: 10)
                 }
-                .sheet(isPresented: $isPresentingNewArmyView) {
+                .sheet(isPresented: $isPresentingCreateArmyView) {
                     NavigationView {
                         CreateArmyView(data: $newArmyData)
                             .toolbar {
                                 ToolbarItem(placement: .cancellationAction) {
                                     Button("Cancel") {
-                                        isPresentingNewArmyView = false
+                                        isPresentingCreateArmyView = false
                                         newArmyData = Army.Data()
                                     }
                                 }
@@ -64,7 +64,7 @@ struct ContentView: View {
                                     Button("Create") {
                                         let newArmy = Army(data: newArmyData)
                                         armies.append(newArmy)
-                                        isPresentingNewArmyView = false
+                                        isPresentingCreateArmyView = false
                                         newArmyData = Army.Data()
                                     }
                                 }
@@ -72,7 +72,8 @@ struct ContentView: View {
                     }
                 }
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+        }
+        .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
         .preferredColorScheme(.dark)
         .onChange(of: scenePhase) { phase in
