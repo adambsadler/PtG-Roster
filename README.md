@@ -1,6 +1,6 @@
 # PtG-Roster
 
-This iOS app is designed to allow Warhammer Age of Sigmar players to manage their armies during Path to Glory campaigns. It is currently under development, and I will update this file as development progresses.
+This iOS app is designed to allow Warhammer Age of Sigmar players to manage their armies during Path to Glory campaigns. It is still a work in progress, but you can view it on the [App Store](https://apps.apple.com/app/path-to-glory-roster/id1614285550) today.
 
 **Privacy Policy**
 
