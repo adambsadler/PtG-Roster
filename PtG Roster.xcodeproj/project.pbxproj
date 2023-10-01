@@ -11,15 +11,23 @@
 		85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CE9827DD00EC000EDDDB /* ContentView.swift */; };
 		85E5CE9B27DD00EC000EDDDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */; };
 		85E5CE9E27DD00EC000EDDDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */; };
-		85E5CEA727DD2BD7000EDDDB /* ArmyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */; };
 		85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA827DD5B59000EDDDB /* Army.swift */; };
-		85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */; };
-		85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */; };
-		85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */; };
-		85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */; };
-		85E5CEB627DE6861000EDDDB /* DetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB527DE6861000EDDDB /* DetailEditView.swift */; };
-		85E5CEB827DEA6E0000EDDDB /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */; };
-		85E5CEBA27DEA779000EDDDB /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEB927DEA779000EDDDB /* ErrorView.swift */; };
+		F9A345672AC86B310094D9CB /* Enhancement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345662AC86B310094D9CB /* Enhancement.swift */; };
+		F9A345692AC883F60094D9CB /* EnhancementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345682AC883F60094D9CB /* EnhancementType.swift */; };
+		F9A3456B2AC884120094D9CB /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3456A2AC884120094D9CB /* Realm.swift */; };
+		F9A3456D2AC884830094D9CB /* ArmySize.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3456C2AC884830094D9CB /* ArmySize.swift */; };
+		F9A3456F2AC884CE0094D9CB /* Territory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3456E2AC884CE0094D9CB /* Territory.swift */; };
+		F9A345712AC884F10094D9CB /* StartingTerritory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345702AC884F10094D9CB /* StartingTerritory.swift */; };
+		F9A345732AC885C40094D9CB /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345722AC885C40094D9CB /* Quest.swift */; };
+		F9A345752AC886330094D9CB /* Stronghold.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345742AC886330094D9CB /* Stronghold.swift */; };
+		F9A345772AC886570094D9CB /* StrongholdType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345762AC886570094D9CB /* StrongholdType.swift */; };
+		F9A345792AC889F30094D9CB /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345782AC889F30094D9CB /* Vault.swift */; };
+		F9A3457B2AC88C470094D9CB /* OrderOfBattle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3457A2AC88C470094D9CB /* OrderOfBattle.swift */; };
+		F9A3457D2AC88CA40094D9CB /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3457C2AC88CA40094D9CB /* Hero.swift */; };
+		F9A3457F2AC88DA40094D9CB /* Injury.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3457E2AC88DA40094D9CB /* Injury.swift */; };
+		F9A345812AC893610094D9CB /* ArmyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345802AC893610094D9CB /* ArmyUnit.swift */; };
+		F9A345832AC9F2560094D9CB /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345822AC9F2560094D9CB /* PreviewContainer.swift */; };
+		F9A345852AC9FEF50094D9CB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,16 +36,24 @@
 		85E5CE9827DD00EC000EDDDB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListView.swift; sourceTree = "<group>"; };
 		85E5CEA827DD5B59000EDDDB /* Army.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
-		85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyRow.swift; sourceTree = "<group>"; };
-		85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyData.swift; sourceTree = "<group>"; };
-		85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
 		85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PtG-Roster-Info.plist"; sourceTree = SOURCE_ROOT; };
-		85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyDetailView.swift; sourceTree = "<group>"; };
-		85E5CEB527DE6861000EDDDB /* DetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEditView.swift; sourceTree = "<group>"; };
-		85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
-		85E5CEB927DEA779000EDDDB /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		F9A345662AC86B310094D9CB /* Enhancement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enhancement.swift; sourceTree = "<group>"; };
+		F9A345682AC883F60094D9CB /* EnhancementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancementType.swift; sourceTree = "<group>"; };
+		F9A3456A2AC884120094D9CB /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
+		F9A3456C2AC884830094D9CB /* ArmySize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmySize.swift; sourceTree = "<group>"; };
+		F9A3456E2AC884CE0094D9CB /* Territory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Territory.swift; sourceTree = "<group>"; };
+		F9A345702AC884F10094D9CB /* StartingTerritory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartingTerritory.swift; sourceTree = "<group>"; };
+		F9A345722AC885C40094D9CB /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		F9A345742AC886330094D9CB /* Stronghold.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stronghold.swift; sourceTree = "<group>"; };
+		F9A345762AC886570094D9CB /* StrongholdType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrongholdType.swift; sourceTree = "<group>"; };
+		F9A345782AC889F30094D9CB /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
+		F9A3457A2AC88C470094D9CB /* OrderOfBattle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderOfBattle.swift; sourceTree = "<group>"; };
+		F9A3457C2AC88CA40094D9CB /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		F9A3457E2AC88DA40094D9CB /* Injury.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injury.swift; sourceTree = "<group>"; };
+		F9A345802AC893610094D9CB /* ArmyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnit.swift; sourceTree = "<group>"; };
+		F9A345822AC9F2560094D9CB /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
+		F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */,
+				F9A345822AC9F2560094D9CB /* PreviewContainer.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -91,13 +108,8 @@
 		85E5CEAA27DD5D16000EDDDB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85E5CEA627DD2BD7000EDDDB /* ArmyListView.swift */,
 				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
-				85E5CEAC27DD5D4E000EDDDB /* ArmyRow.swift */,
-				85E5CEB027DE3F7B000EDDDB /* CreateArmyView.swift */,
-				85E5CEB327DE5407000EDDDB /* ArmyDetailView.swift */,
-				85E5CEB527DE6861000EDDDB /* DetailEditView.swift */,
-				85E5CEB927DEA779000EDDDB /* ErrorView.swift */,
+				F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,8 +118,20 @@
 			isa = PBXGroup;
 			children = (
 				85E5CEA827DD5B59000EDDDB /* Army.swift */,
-				85E5CEAE27DD6E38000EDDDB /* ArmyData.swift */,
-				85E5CEB727DEA6E0000EDDDB /* ErrorWrapper.swift */,
+				F9A345662AC86B310094D9CB /* Enhancement.swift */,
+				F9A345682AC883F60094D9CB /* EnhancementType.swift */,
+				F9A3456A2AC884120094D9CB /* Realm.swift */,
+				F9A3456C2AC884830094D9CB /* ArmySize.swift */,
+				F9A3456E2AC884CE0094D9CB /* Territory.swift */,
+				F9A345702AC884F10094D9CB /* StartingTerritory.swift */,
+				F9A345722AC885C40094D9CB /* Quest.swift */,
+				F9A345742AC886330094D9CB /* Stronghold.swift */,
+				F9A345762AC886570094D9CB /* StrongholdType.swift */,
+				F9A345782AC889F30094D9CB /* Vault.swift */,
+				F9A3457A2AC88C470094D9CB /* OrderOfBattle.swift */,
+				F9A3457C2AC88CA40094D9CB /* Hero.swift */,
+				F9A3457E2AC88DA40094D9CB /* Injury.swift */,
+				F9A345802AC893610094D9CB /* ArmyUnit.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -182,17 +206,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85E5CEA727DD2BD7000EDDDB /* ArmyListView.swift in Sources */,
-				85E5CEAD27DD5D4E000EDDDB /* ArmyRow.swift in Sources */,
-				85E5CEB627DE6861000EDDDB /* DetailEditView.swift in Sources */,
-				85E5CEAF27DD6E38000EDDDB /* ArmyData.swift in Sources */,
+				F9A345832AC9F2560094D9CB /* PreviewContainer.swift in Sources */,
+				F9A345852AC9FEF50094D9CB /* CreateArmyView.swift in Sources */,
+				F9A3457F2AC88DA40094D9CB /* Injury.swift in Sources */,
+				F9A3456F2AC884CE0094D9CB /* Territory.swift in Sources */,
+				F9A3456D2AC884830094D9CB /* ArmySize.swift in Sources */,
+				F9A345752AC886330094D9CB /* Stronghold.swift in Sources */,
+				F9A345712AC884F10094D9CB /* StartingTerritory.swift in Sources */,
+				F9A345772AC886570094D9CB /* StrongholdType.swift in Sources */,
+				F9A3456B2AC884120094D9CB /* Realm.swift in Sources */,
 				85E5CE9927DD00EC000EDDDB /* ContentView.swift in Sources */,
-				85E5CEB127DE3F7B000EDDDB /* CreateArmyView.swift in Sources */,
+				F9A345732AC885C40094D9CB /* Quest.swift in Sources */,
+				F9A3457D2AC88CA40094D9CB /* Hero.swift in Sources */,
+				F9A3457B2AC88C470094D9CB /* OrderOfBattle.swift in Sources */,
+				F9A345812AC893610094D9CB /* ArmyUnit.swift in Sources */,
+				F9A345792AC889F30094D9CB /* Vault.swift in Sources */,
 				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
-				85E5CEB427DE5407000EDDDB /* ArmyDetailView.swift in Sources */,
-				85E5CEB827DEA6E0000EDDDB /* ErrorWrapper.swift in Sources */,
+				F9A345672AC86B310094D9CB /* Enhancement.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,
-				85E5CEBA27DEA779000EDDDB /* ErrorView.swift in Sources */,
+				F9A345692AC883F60094D9CB /* EnhancementType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +353,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PtG Roster/Preview Content\"";
 				DEVELOPMENT_TEAM = 7SGM899LTH;
 				ENABLE_PREVIEWS = YES;
@@ -333,16 +365,20 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adambsadler.PtG-Roster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -352,7 +388,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PtG Roster/Preview Content\"";
 				DEVELOPMENT_TEAM = 7SGM899LTH;
 				ENABLE_PREVIEWS = YES;
@@ -364,16 +400,20 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.01;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.adambsadler.PtG-Roster";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

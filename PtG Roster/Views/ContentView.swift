@@ -6,16 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
-    @Binding var armies: [Army]
-    @Environment(\.scenePhase) private var scenePhase
-    @State private var isPresentingCreateArmyView = false
-    @State private var newArmyData = Army.Data()
-    let saveAction: ()->Void
+    @State private var path = NavigationPath()
+    @State private var isShowingSheet: Bool = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $path) {
             ZStack {
                 Image("PtG Background")
                     .resizable()
@@ -27,18 +25,18 @@ struct ContentView: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 350.0)
                     Divider()
-                    NavigationLink(destination: ArmyListView(armies: $armies)) {
+                    NavigationLink(value: 1) {
                         Text("My Armies")
                             .padding()
                             .foregroundColor(.black)
                             .font(.system(size: 25))
-                            .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
+                            .background(.yellow)
                             .cornerRadius(25)
                             .shadow(radius: 10)
                     }
                     Divider()
                     Button(action: {
-                        isPresentingCreateArmyView = true
+                        isShowingSheet.toggle()
                     }) {
                         Text("New Army")
                     }
@@ -46,44 +44,20 @@ struct ContentView: View {
                         .padding()
                         .foregroundColor(.black)
                         .font(.system(size: 25))
-                        .background(Color(red: 0.9, green: 0.8, blue: 0.3, opacity: 1.0))
+                        .background(.yellow)
                         .cornerRadius(25)
                         .shadow(radius: 10)
                 }
-                .sheet(isPresented: $isPresentingCreateArmyView) {
-                    NavigationView {
-                        CreateArmyView(data: $newArmyData)
-                            .toolbar {
-                                ToolbarItem(placement: .cancellationAction) {
-                                    Button("Cancel") {
-                                        isPresentingCreateArmyView = false
-                                        newArmyData = Army.Data()
-                                    }
-                                }
-                                ToolbarItem(placement: .confirmationAction) {
-                                    Button("Create") {
-                                        let newArmy = Army(data: newArmyData)
-                                        armies.append(newArmy)
-                                        isPresentingCreateArmyView = false
-                                        newArmyData = Army.Data()
-                                    }
-                                }
-                            }
-                    }
-                }
             }
         }
-        .navigationViewStyle(StackNavigationViewStyle())
         .navigationBarHidden(true)
-        .preferredColorScheme(.dark)
-        .onChange(of: scenePhase) { phase in
-            if phase == .inactive { saveAction() }
-        }
+        .sheet(isPresented: $isShowingSheet, content: {
+            CreateArmyView(isShowingSheet: $isShowingSheet)
+        })
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(armies: .constant(Army.sampleData), saveAction: {})
-    }
+#Preview {
+    ContentView()
+        .modelContainer(previewContainer)
 }
