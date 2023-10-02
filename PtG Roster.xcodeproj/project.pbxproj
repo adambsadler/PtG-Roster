@@ -28,6 +28,7 @@
 		F9A345812AC893610094D9CB /* ArmyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345802AC893610094D9CB /* ArmyUnit.swift */; };
 		F9A345832AC9F2560094D9CB /* PreviewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345822AC9F2560094D9CB /* PreviewContainer.swift */; };
 		F9A345852AC9FEF50094D9CB /* CreateArmyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */; };
+		F9A345882ACB0AE50094D9CB /* NavManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345872ACB0AE50094D9CB /* NavManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F9A345802AC893610094D9CB /* ArmyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyUnit.swift; sourceTree = "<group>"; };
 		F9A345822AC9F2560094D9CB /* PreviewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContainer.swift; sourceTree = "<group>"; };
 		F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateArmyView.swift; sourceTree = "<group>"; };
+		F9A345872ACB0AE50094D9CB /* NavManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		85E5CE9527DD00EC000EDDDB /* PtG Roster */ = {
 			isa = PBXGroup;
 			children = (
+				F9A345862ACB0AD00094D9CB /* Navigation */,
 				85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */,
 				85E5CE9627DD00EC000EDDDB /* PtG_RosterApp.swift */,
 				85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */,
@@ -134,6 +137,14 @@
 				F9A345802AC893610094D9CB /* ArmyUnit.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F9A345862ACB0AD00094D9CB /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				F9A345872ACB0AE50094D9CB /* NavManager.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +232,7 @@
 				F9A3457B2AC88C470094D9CB /* OrderOfBattle.swift in Sources */,
 				F9A345812AC893610094D9CB /* ArmyUnit.swift in Sources */,
 				F9A345792AC889F30094D9CB /* Vault.swift in Sources */,
+				F9A345882ACB0AE50094D9CB /* NavManager.swift in Sources */,
 				85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */,
 				F9A345672AC86B310094D9CB /* Enhancement.swift in Sources */,
 				85E5CE9727DD00EC000EDDDB /* PtG_RosterApp.swift in Sources */,

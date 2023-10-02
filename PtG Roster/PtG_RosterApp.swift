@@ -10,10 +10,11 @@ import SwiftData
 
 @main
 struct PtG_RosterApp: App {
-    
+    @StateObject var navManager = NavManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(navManager)
         }
         .modelContainer(for: Army.self)
     }

@@ -9,11 +9,11 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var path = NavigationPath()
+    @EnvironmentObject var navManager: NavManager
     @State private var isShowingSheet: Bool = false
     
     var body: some View {
-        NavigationStack(path: $path) {
+        NavigationStack(path: $navManager.path) {
             ZStack {
                 Image("PtG Background")
                     .resizable()
@@ -60,4 +60,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .modelContainer(previewContainer)
+        .environmentObject(NavManager())
 }
