@@ -15,7 +15,7 @@ final class Hero {
     var commandTrait: Enhancement?
     var enhancements: [Enhancement]? = []
     var notes: [String] = []
-    var injury: String?
+    var currentInjury: String?
     var renown: Int = 0
     var points: Int
     

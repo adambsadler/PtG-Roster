@@ -14,7 +14,7 @@ final class Army {
     var faction: String
     var subfaction: String
     var realm: String
-    var startingSize: String
+    var currentSize: String
     var startingTerritory: String
     var gloryPoints: Int = 0
     var vault: Vault
@@ -27,15 +27,15 @@ final class Army {
     @Relationship(deleteRule: .cascade) var currentTerritories: [Territory]? = []
     @Relationship(deleteRule: .cascade) var orderOfBattle: OrderOfBattle
     
-    init(name: String, faction: String, subfaction: String, realm: String, startingSize: ArmySize, startingTerritory: String, strongHoldName: String) {
+    init(name: String, faction: String, subfaction: String, realm: String, currentSize: ArmySize, startingTerritory: String, strongHoldName: String) {
         self.name = name
         self.faction = faction
         self.subfaction = subfaction
         self.realm = realm
-        self.startingSize = startingSize.rawValue
+        self.currentSize = currentSize.rawValue
         self.startingTerritory = startingTerritory
         self.stronghold = Stronghold(name: strongHoldName)
         self.vault = Vault()
-        self.orderOfBattle = OrderOfBattle(armySize: startingSize)
+        self.orderOfBattle = OrderOfBattle(armySize: currentSize)
     }
 }

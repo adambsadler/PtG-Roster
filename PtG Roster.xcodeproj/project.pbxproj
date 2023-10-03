@@ -12,6 +12,7 @@
 		85E5CE9B27DD00EC000EDDDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9A27DD00EC000EDDDB /* Assets.xcassets */; };
 		85E5CE9E27DD00EC000EDDDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */; };
 		85E5CEA927DD5B59000EDDDB /* Army.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E5CEA827DD5B59000EDDDB /* Army.swift */; };
+		F984F60A2ACC637500931FE6 /* ArmyListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984F6092ACC637500931FE6 /* ArmyListView.swift */; };
 		F9A345672AC86B310094D9CB /* Enhancement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345662AC86B310094D9CB /* Enhancement.swift */; };
 		F9A345692AC883F60094D9CB /* EnhancementType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A345682AC883F60094D9CB /* EnhancementType.swift */; };
 		F9A3456B2AC884120094D9CB /* Realm.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A3456A2AC884120094D9CB /* Realm.swift */; };
@@ -39,6 +40,7 @@
 		85E5CE9D27DD00EC000EDDDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		85E5CEA827DD5B59000EDDDB /* Army.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Army.swift; sourceTree = "<group>"; };
 		85E5CEB227DE4469000EDDDB /* PtG-Roster-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "PtG-Roster-Info.plist"; sourceTree = SOURCE_ROOT; };
+		F984F6092ACC637500931FE6 /* ArmyListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArmyListView.swift; sourceTree = "<group>"; };
 		F9A345662AC86B310094D9CB /* Enhancement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enhancement.swift; sourceTree = "<group>"; };
 		F9A345682AC883F60094D9CB /* EnhancementType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnhancementType.swift; sourceTree = "<group>"; };
 		F9A3456A2AC884120094D9CB /* Realm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 			children = (
 				85E5CE9827DD00EC000EDDDB /* ContentView.swift */,
 				F9A345842AC9FEF50094D9CB /* CreateArmyView.swift */,
+				F984F6092ACC637500931FE6 /* ArmyListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				F9A345832AC9F2560094D9CB /* PreviewContainer.swift in Sources */,
 				F9A345852AC9FEF50094D9CB /* CreateArmyView.swift in Sources */,
 				F9A3457F2AC88DA40094D9CB /* Injury.swift in Sources */,
+				F984F60A2ACC637500931FE6 /* ArmyListView.swift in Sources */,
 				F9A3456F2AC884CE0094D9CB /* Territory.swift in Sources */,
 				F9A3456D2AC884830094D9CB /* ArmySize.swift in Sources */,
 				F9A345752AC886330094D9CB /* Stronghold.swift in Sources */,

@@ -60,7 +60,7 @@ struct CreateArmyView: View {
             }
             
             Button(action: {
-                let newArmy = Army(name: armyName, faction: armyFaction, subfaction: subFaction, realm: realm.rawValue, startingSize: armySize, startingTerritory: startingTerritory.rawValue, strongHoldName: strongholdName)
+                let newArmy = Army(name: armyName, faction: armyFaction, subfaction: subFaction, realm: realm.rawValue, currentSize: armySize, startingTerritory: startingTerritory.rawValue, strongHoldName: strongholdName)
                 
                 modelContext.insert(newArmy)
                 isShowingSheet.toggle()
